@@ -19,14 +19,10 @@ Your trainer can show you how to do this, if you need any help.
 5. Run this command to set up the necessary dependencies:  
 `poetry install`
 
-6. Copy the `.env-template` file to a new `.env` file. This `.env` file shouldn't ever be committed (and is already included in the `.gitignore`) as it may contain secrets.
+6. Follow the instructions in the section `Setting up Postgres` below to ensure that the database is ready for use. (You'll notice that your `.env` file contains POSTGRES config variables. The instructions below setup a user to match that config, with the right permissions to create the database when the app runs.)
 
-7. Follow the instructions in the section `Setting up Postgres` below to ensure that the database is ready for use. (You'll notice that your `.env` file contains POSTGRES config variables. The instructions below setup a user to match that config, with the right permissions to create the database when the app runs.)
-
-8. Run this command to run your code:  
+7. Run this command to run your code:  
 `poetry run flask run`
-
-9. The app should now be available at `http://localhost:5000`
 
 ## Setting up Postgres
 
