@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "exercise-template"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = [
+  {include = "src"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+python-dotenv = "^0.21.1"
+psycopg2 = "^2.9.5"
+Flask-SQLAlchemy = "^3.0.3"
+alembic = "^1.9.2"
+Flask-Migrate = "^4.0.4"
+Flask-Script = "^2.0.6"
+SQLAlchemy = "^2.0.2"
+marshmallow = "^3.19.0"
+
+[tool.poetry.scripts]
+start = "src:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
