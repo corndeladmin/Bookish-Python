@@ -31,9 +31,6 @@ def get_engine_url():
     except AttributeError:
         return str(get_engine().url).replace('%', '%%')
 
-# add your models here
-from app.models import book
-
 config.set_main_option('sqlalchemy.url', get_engine_url())
 target_db = current_app.extensions['migrate'].db
 

@@ -2,7 +2,6 @@ from flask import Flask
 from flask_migrate import Migrate, upgrade, migrate
 from app.models.book import Book, BookSchema
 
-
 from app.models import db
 
 def _update_and_apply_migrations():
@@ -21,10 +20,4 @@ Migrate(app, db)
 with app.app_context():
     _update_and_apply_migrations()
 
-
-# define routes
-@app.route('/books')
-def get_books():
-    books = Book.query.all()
-    schema = BookSchema(many=True)
-    return schema.dump(books)
+# define routes here
